@@ -1,0 +1,29 @@
+HidroSed v3.8.5 · QA Hotfix casos visibles y lámina cartográfica activa
+
+Validaciones ejecutadas:
+
+1. python -m compileall .
+   Resultado: OK
+
+2. pytest -q
+   Resultado: 54 pruebas aprobadas
+
+3. Prueba específica de casos:
+   - Se verificó existencia de Caso 1, Caso 2, Caso 3 y Caso 4.
+   - Se verificaron textos clave: interno, dentro/fuera, marginal y externo.
+   Resultado: OK
+
+4. Prueba específica de lámina cartográfica:
+   - Se creó DEM sintético EPSG:4326.
+   - Se cargó polígono KML de cuenca activa.
+   - Se generó lámina PNG usando cuenca activa.
+   - Se verificó salida PNG válida.
+   Resultado: OK
+
+5. Pruebas de continuidad:
+   - test_v384_core_ordered_sections3d.py
+   - test_streamlit_download_keys_v383a.py
+   Resultado: OK
+
+Observación:
+No se pudo levantar interfaz Streamlit en este contenedor porque no está instalado el paquete streamlit en el entorno de ejecución local. La aplicación sí conserva streamlit==1.45.1 en requirements.txt para Streamlit Cloud/Hugging Face/ambiente local.

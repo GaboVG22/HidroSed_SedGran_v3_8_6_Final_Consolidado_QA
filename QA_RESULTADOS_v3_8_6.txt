@@ -1,0 +1,26 @@
+HidroSed v3.8.6 · QA producción
+
+Base: HidroSed_SedGran_v3_8_5_Hotfix_Casos_Lamina_QA.zip
+Prompt aplicado: Prompt_Final_HidroSed_Mejoras.docx
+
+Pruebas ejecutadas:
+- python -m compileall . : OK
+- pytest -q : 63 pruebas aprobadas
+- test_v386_final_consolidated.py : OK
+- test_v386_app_integration.py : OK
+- pruebas heredadas secciones v13 + perfil 3D : OK
+- pruebas heredadas hidrología/hidráulica/sedimentos : OK
+- pruebas heredadas cuatro casos y lámina cartográfica : OK
+- pruebas heredadas KMZ y download keys duplicadas : OK
+
+Validaciones específicas v3.8.6:
+- Nombre de proyecto y archivos oficiales: OK
+- Flujo oficial 19 etapas: OK
+- Separación cuenca topográfica/subcuenca/eje: OK
+- Parámetros de cuenca activa: OK
+- Análisis estadístico de frecuencia: OK
+- Caudal agregado por km: OK
+- Exportación con nombres de proyecto: OK
+
+Observación:
+- No se ejecutó streamlit run app.py porque este contenedor no tiene instalado el paquete streamlit. La dependencia sigue declarada en requirements.txt.

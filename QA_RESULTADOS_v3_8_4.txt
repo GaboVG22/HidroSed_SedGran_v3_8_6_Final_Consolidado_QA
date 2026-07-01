@@ -1,0 +1,42 @@
+HidroSed SedGran v3.8.4 · Core Ordenado Secciones 3D QA
+
+Auditoría ejecutada:
+
+1) Compilación
+   Comando: python -m compileall .
+   Resultado: OK
+
+2) Pytest
+   Comando: pytest -q
+   Resultado: 52 pruebas aprobadas
+
+3) Prueba nueva de secciones v13 + perfil 3D
+   Archivo: tests/test_v384_core_ordered_sections3d.py
+   Resultado: OK
+   Verifica:
+   - lectura KML interno eje + curvas;
+   - extracción de LineString;
+   - generación de secciones;
+   - muestreo de perfiles;
+   - QA modelable;
+   - generación de perfil 3D Plotly/HTML.
+
+4) Prueba nueva de hidráulica/sedimentos preservados
+   Archivo: tests/test_v384_core_ordered_sections3d.py
+   Resultado: OK
+   Verifica:
+   - cálculo hidráulico conectado tipo HEC-RAS simplificado;
+   - velocidad, Froude, energía, radio hidráulico;
+   - cálculo sedimentológico derivado.
+
+5) Revisión estática de descargas
+   Resultado: OK
+   No se detectaron botones download_button duplicados sin key.
+
+6) Revisión de versión
+   Resultado: OK
+   No quedan referencias a v3.8.3A en app.py.
+
+Limitación del ambiente:
+   En este contenedor no está instalado Streamlit, por lo que no fue posible ejecutar una prueba visual interactiva con streamlit run app.py.
+   La compilación, pruebas unitarias/funcionales y empaquetado sí fueron ejecutados correctamente.

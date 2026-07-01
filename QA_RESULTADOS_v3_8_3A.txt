@@ -1,0 +1,10 @@
+HidroSed v3.8.3A · QA Hotfix descarga KMZ
+
+Validaciones ejecutadas:
+- python -m compileall app: OK
+- pytest: OK
+- revisión estática AST de download_button duplicados sin key: OK
+- verificación de paquete ZIP: OK
+
+Corrección principal:
+- Hotfix de claves únicas en botones de descarga KMZ para evitar StreamlitDuplicateElementId.
